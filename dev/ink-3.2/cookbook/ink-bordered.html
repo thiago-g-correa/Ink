@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>INK Bordered Theme</title>
+        <meta name="description" content="">
+        <meta name="author" content="ink, cookbook, recipes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) here  -->
+
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+        <link rel="apple-touch-icon" href="../img/touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../img/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../img/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../img/touch-icon-ipad-retina.png">
+        <link rel="apple-touch-startup-image" href="../img/splash.320x460.png" media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="../img/splash.768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="../img/splash.1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+
+        <!-- load Ink's CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/ink-bordered.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+
+        <!-- load Ink's CSS for IE8 -->
+        <!--[if lt IE 9 ]>
+            <link rel="stylesheet" href="../css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <!-- test browser flexbox support and load legacy grid if unsupported -->
+        <script type="text/javascript" src="../js/modernizr.js"></script>
+        <script type="text/javascript">
+            Modernizr.load({
+              test: Modernizr.flexbox,
+              nope : '../css/ink-legacy.min.css'
+            });
+        </script>
+
+        <!-- load Ink's javascript files -->
+        <script type="text/javascript" src="../js/holder.js"></script>
+        <script type="text/javascript" src="../js/ink-all.min.js"></script>
+        <script type="text/javascript" src="../js/autoload.js"></script>
+
+
+        <style type="text/css">
+
+            body {
+                background: #ededed;
+            }
+
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            footer {
+                background: #ccc;
+            }
+            .column-group > div{padding:30px 0; border-bottom:1px solid #ccc}
+            .column-group.gutters > div{padding:0;border-bottom:0}
+            .column-group > div > div{padding:10px 0;}
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="ink-grid">
+
+            <!--[if lt IE 9 ]>
+            <div class="ink-alert basic" role="alert">
+                <button class="ink-dismiss">&times;</button>
+                <p>
+                    <strong>You are using an outdated Internet Explorer version.</strong>
+                    Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
+                </p>
+            </div>
+            <![endif]-->
+
+            <!-- Add your site or application content here -->
+
+            <header class="vertical-space">
+                <h1>INK<small>BORDERED THEME</small></h1>
+                <nav class="ink-navigation">
+                    <ul class="menu horizontal black">
+                        <li><a href="../cookbook/ink-square.html">Square Theme</a></li>
+                        <li><a href="../cookbook/ink-rounded.html">Rounded Theme</a></li>
+                        <li class="active"><a href="../cookbook/ink-bordered.html">Bordered Theme</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="column-group">
+                <div class="all-100">
+                    <h3>Navigation</h3>
+                    <div class="all-100">
+                        <strong>Menu Horizontal</strong>
+                        <nav class="ink-navigation">
+                            <ul class="menu horizontal">
+                                <li class="heading"><a href="#">Home</a></li>
+                                <li>
+                                    <a href="#">Post archive</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">January</a></li>
+                                        <li><a href="#">February</a></li>
+                                        <li><a href="#">March</a></li>
+                                        <li><a href="#">...</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="all-100">
+                        <strong>Menu Vertical</strong>
+                        <nav class="ink-navigation">
+                            <ul class="menu vertical black">
+                                <li class="heading active"><a href="#">Home</a></li>
+                                <li>
+                                    <a href="#">Post archive</a>
+                                    <ul class="submenu">
+                                        <li><a href="#">January</a></li>
+                                        <li><a href="#">February</a></li>
+                                        <li><a href="#">March</a></li>
+                                        <li><a href="#">...</a></li>
+                                    </ul>
+                                </li>
+                                <li class="disabled"><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="all-100">
+                        <strong>Breadcrumbs</strong>
+                        <nav class="ink-navigation">
+                            <ul class="breadcrumbs">
+                                <li><a href="#">Start</a></li>
+                                <li><a href="#">Level 1</a></li>
+                                <li><a href="#">Level 2</a></li>
+                                <li class="active"><a href="#">Current item</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="all-100">
+                        <strong>Pagination</strong>
+                        <nav class="ink-navigation">
+                            <ul class="pagination">
+                                <li class="disabled"><a href="#">Previous</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="all-100">
+                        <strong>Pills</strong>
+                        <nav class="ink-navigation">
+                            <ul class="pagination pills black">
+                                <li class="disabled"><a href="#">Pill disabled</a></li>
+                                <li class="active"><a href="#">Pill 1</a></li>
+                                <li><a href="#">Pill 2</a></li>
+                                <li><a href="#">Pill 3</a></li>
+                                <li><a href="#">Pill 4</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="all-100">
+                        <strong>Dropdown</strong>
+                        <div class="ink-navigation">
+                            <ul class="dropdown" style="position:relative">
+                                <li><a href="#">Back</a></li>
+                                <li><a href="#">Forward</a></li>
+                                <li><a href="#">Copy</a></li>
+                                <li><a href="#">Cut</a></li>
+                                <li><a href="#">Paste</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-100">
+                    <h3>Buttons</h3>
+                    <div class="all-100">
+                        <strong>Simple Button</strong>
+                        <div class="all-100">
+                            <button class="ink-button">Button</button>
+                            <button class="ink-button blue">Button</button>
+                            <button class="ink-button green">Button</button>
+                            <button class="ink-button orange">Button</button>
+                            <button class="ink-button red">Button</button>
+                            <button class="ink-button black">Button</button>
+                        </div>
+                    </div>
+                    <div class="all-100">
+                        <strong>Button Groups</strong>
+                        <div class="button-toolbar">
+                            <div class="button-group">
+                                <button class="ink-button"><span class="fa fa-file"></span></button>
+                                <button class="ink-button"><span class="fa fa-save"></span></button>
+                            </div>
+                            <div class="button-group">
+                                <button class="ink-button"><span class="fa fa-bold"></span></button>
+                                <button class="ink-button"><span class="fa fa-italic"></span></button>
+                                <button class="ink-button"><span class="fa fa-underline"></span></button>
+                            </div>
+                            <div class="button-group">
+                                <button class="ink-button"><span class="fa fa-align-left"></span></button>
+                                <button class="ink-button"><span class="fa fa-align-center"></span></button>
+                                <button class="ink-button"><span class="fa fa-align-right"></span></button>
+                                <button class="ink-button"><span class="fa fa-align-justify"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-100">
+                    <h3>Images</h3>
+                    <div class="all-100">
+                        <strong>Captions</strong>
+                        <div class="column-group gutters">
+                            <div class="all-50">
+                                <figure class="ink-image">
+                                    <figcaption>
+                                      This caption is placed before the image
+                                    </figcaption>
+                                    <img src="../img/landscape.jpg">
+                                </figure>
+                            </div>
+                            <div class="all-50">
+                                <figure class="ink-image">
+                                    <img src="../img/landscape.jpg">
+                                    <figcaption>
+                                      This caption is placed after the image.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="all-50">
+                                <figure class="ink-image">
+                                    <img src="../img/landscape.jpg">
+                                    <figcaption class="over-top">
+                                      This a caption over the top of the image.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="all-50">
+                                <figure class="ink-image">
+                                    <img src="../img/landscape.jpg">
+                                    <figcaption class="over-bottom">
+                                      This a caption over the top of the image.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-100">
+                    <h3>Forms</h3>
+                    <div class="all-100">
+                        <strong>Input</strong>
+                        <form class="ink-form">
+                            <div class="control-group">
+                                <div class="control">
+                                    <input id="email" name="email" type="text" placeholder="Type some text">
+                                </div>
+                            </div>
+                        </form>
+                        <form class="ink-form">
+                            <div class="control-group validation warning">
+                                <div class="control">
+                                    <input id="warn-field" name="a-field" type="text">
+                                </div>
+                                <p class="tip">Warn about something</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="all-100">
+                        <strong>Buttons</strong>
+                        <form class="ink-form">
+                            <div class="all-100">
+                                <div class="control-group all-100">
+                                    <div class="control append-button" role="search">
+                                        <span><input type="text" name="name" id="name"></span>
+                                        <button class="ink-button">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="all-100">
+                        <strong>Symbols</strong>
+                        <form class="ink-form">
+                            <div>
+                                <div class="control-group all-100">
+                                    <div class="control prepend-symbol">
+                                        <span>
+                                            <input type="text" name="email" placeholder="email">
+                                            <i class="fa fa-envelope-o"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="all-100">
+                    <h3>Alerts</h3>
+                    <div class="all-100">
+                        <strong>Warnings</strong>
+                        <div class="ink-alert basic" role="alert">
+                            <button class="ink-dismiss">&times;</button>
+                            <p><b>Warning:</b> There's a warning for you</p>
+                        </div>
+                    </div>
+                    <div class="all-100">
+                        <strong>Block Alert</strong>
+                        <div class="ink-alert success block" role="alert">
+                            <button class="ink-dismiss">&times;</button>
+                            <h4>System maintenance scheduled</h4>
+                            <p>Please note that, due to a platypus invasion on our datacenter early last morning, the servers will have to undergo a maintenance cleaning today at 23:00 GMT.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-100">
+                    <h3>Flexbox Grid</h3>
+                    <div class="ink-grid bordered-grid">
+                        <div class="column-group gutters">
+                          <div class="all-33 tiny-100 small-100">
+                            <div class="inner-column">
+                                <img src="../img/landscape.jpg">
+                                <h4>Heading</h4>
+                                <a href="#" class="ink-button black">Click here</a>
+                            </div>  
+                          </div>
+                          <div class="all-33 tiny-100 small-100">
+                            <div class="inner-column">
+                                <img src="../img/landscape.jpg">
+                                <h4>Heading</h4>
+                                <a href="#" class="ink-button black">Click here</a>
+                            </div>
+                          </div>
+                          <div class="all-33 tiny-100 small-100">
+                            <div class="inner-column">
+                                <img src="../img/landscape.jpg">
+                                <h4>Heading</h4>
+                                <a href="#" class="ink-button black">Click here</a>
+                            </div>
+                          </div>
+                          <div class="all-33 tiny-100 small-100">
+                            <div class="inner-column">
+                                <img src="../img/landscape.jpg">
+                                <h4>Heading</h4>
+                                <a href="#" class="ink-button black">Click here</a>
+                            </div>
+                          </div>
+                          <div class="all-33 tiny-100 small-100">
+                            <div class="inner-column">
+                                <img src="../img/landscape.jpg">
+                                <h4>Heading</h4>
+                                <a href="#" class="ink-button black">Click here</a>
+                            </div>
+                          </div>
+                          <div class="all-33 tiny-100 small-100">
+                            <div class="inner-column">
+                                <img src="../img/landscape.jpg">
+                                <h4>Heading</h4>
+                                <a href="#" class="ink-button black">Click here</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-100">
+                    <h3>CSS-Grid</h3>
+                    <div class="ink-grid">
+                        <div class="ink-css-grid column-3 tiny-column-1 small-column-1 css-grid-gutters">
+                            <div>
+                                <div class="inner-column">
+                                    <img src="../img/landscape.jpg">
+                                    <h4>Heading</h4>
+                                    <a href="#" class="ink-button black">Click here</a>
+                                </div>  
+                              </div>
+                              <div>
+                                <div class="inner-column">
+                                    <img src="../img/landscape.jpg">
+                                    <h4>Heading</h4>
+                                    <a href="#" class="ink-button black">Click here</a>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="inner-column">
+                                    <img src="../img/landscape.jpg">
+                                    <h4>Heading</h4>
+                                    <a href="#" class="ink-button black">Click here</a>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="inner-column">
+                                    <img src="../img/landscape.jpg">
+                                    <h4>Heading</h4>
+                                    <a href="#" class="ink-button black">Click here</a>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="inner-column">
+                                    <img src="../img/landscape.jpg">
+                                    <h4>Heading</h4>
+                                    <a href="#" class="ink-button black">Click here</a>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="inner-column">
+                                    <img src="../img/landscape.jpg">
+                                    <h4>Heading</h4>
+                                    <a href="#" class="ink-button black">Click here</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="clearfix">
+            <div class="ink-grid">
+                <ul class="unstyled inline half-vertical-space">
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+                <p class="note">Identification of the owner of the copyright, either by name, abbreviation, or other designation by which it is generally known.</p>
+            </div>
+        </footer>
+    </body>
+</html>
